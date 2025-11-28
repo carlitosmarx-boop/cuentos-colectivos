@@ -1,0 +1,9 @@
+[build]
+  publish = "/"
+  command = ""
+
+# Esto asegura que Netlify agregue las cabeceras CORS adecuadas para el CMS
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
