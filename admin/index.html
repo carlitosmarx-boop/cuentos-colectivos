@@ -1,12 +1,10 @@
 <script src="https://unpkg.com/netlify-cms-app@^2.0.0/dist/netlify-cms.js"></script>
-    <script>
-      /* Carga del CMS. El archivo de configuración está en admin/config.yml */
-      
-      // Añade estas líneas para inicializar el CMS explícitamente:
-      if (typeof CMS !== 'undefined') {
-        CMS.init();
-      }
-    </script>
-    <h2>Si ves esta pantalla significa que el CMS no ha cargado correctamente.</h2>
-  </body>
-</html>
+<script>
+  // SOLUCIÓN 6: Definir la URL de Identity
+  window.netlifyIdentity = 'https://cuentos-colectivos-app.netlify.app/.netlify/identity';
+
+  // Inicialización Explícita (Solución 5)
+  if (typeof CMS !== 'undefined') {
+    CMS.init();
+  }
+</script>
