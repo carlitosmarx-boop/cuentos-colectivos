@@ -1,0 +1,8 @@
+---
+title: "Mi primera historia"
+date: "2025-11-27T16:00:00"
+author: "Usuario de prueba"
+thumbnail: "/uploads/ejemplo.jpg"
+---
+
+Este es el cuerpo de la historia de prueba. Edita desde /admin/.

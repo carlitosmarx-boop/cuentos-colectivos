@@ -1,23 +1,22 @@
 backend:
   name: git-gateway
-  branch: main # Cambia si tu rama principal se llama 'master'
+  branch: main
 
-# Esta configuración es importante para el Decap CMS
-publish_mode: editorial_workflow
-
-# Carpeta donde se guardan las imágenes subidas
 media_folder: "static/uploads"
-public_folder: "/static/uploads"
+public_folder: "/uploads"
 
-# Colección principal de contenido: Historias
+# Publicación directa sin revisión (reemplaza al editorial_workflow)
+publish_mode: simple
+
 collections:
-  - name: "historias"
+  - name: "stories"
     label: "Historias"
     folder: "content/stories"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Título", name: "title", widget: "string"}
-      - {label: "Autor", name: "author", widget: "string"}
-      - {label: "Fecha", name: "date", widget: "datetime"}
-      - {label: "Cuerpo del Cuento", name: "body", widget: "markdown"}
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Autor", name: "author", widget: "string", required: false }
+      - { label: "Portada (opcional)", name: "thumbnail", widget: "image", required: false }
+      - { label: "Cuerpo", name: "body", widget: "markdown" }
