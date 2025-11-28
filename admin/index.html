@@ -1,10 +1,23 @@
-<script src="https://unpkg.com/netlify-cms-app@^2.0.0/dist/netlify-cms.js"></script>
-<script>
-  // SOLUCIÓN 6: Definir la URL de Identity
-  window.netlifyIdentity = 'https://cuentos-colectivos-app.netlify.app/.netlify/identity';
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Admin - Cuentos Colectivos</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    
+    <meta name="netlify-cms-config" content="/admin/config.yml">
+    
+  </head>
+  <body>
+    <script src="https://unpkg.com/netlify-cms-app@^2.0.0/dist/netlify-cms.js"></script>
+    <script>
+      // Definir la URL de Identity
+      window.netlifyIdentity = 'https://cuentos-colectivos-app.netlify.app/.netlify/identity';
 
-  // Inicialización Explícita (Solución 5)
-  if (typeof CMS !== 'undefined') {
-    CMS.init();
-  }
-</script>
+      // Inicialización Explícita 
+      if (typeof CMS !== 'undefined') {
+        CMS.init();
+      }
+    </script>
+  </body>
+</html>
